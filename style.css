@@ -1,0 +1,157 @@
+body {
+    background-image: radial-gradient(circle, #000 1px, transparent 1px);
+    background-size: 20px 20px;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.envelope {
+    width: 300px;
+    height: 200px;
+    background-color: #f0f0f0;
+    position: relative;
+    cursor: pointer;
+    transition: transform 0.5s;
+}
+
+.envelope:hover {
+    transform: scale(1.05);
+}
+
+.envelope-flap {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 0;
+    border-top: 100px solid #e0e0e0;
+    border-left: 150px solid transparent;
+    border-right: 150px solid transparent;
+    transition: transform 0.5s;
+    z-index: 2;
+}
+
+.envelope.open .envelope-flap {
+    transform: rotateX(180deg);
+    transform-origin: top;
+}
+
+.envelope-content {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    right: 10px;
+    bottom: 10px;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.5s;
+}
+
+.envelope.open .envelope-content {
+    opacity: 1;
+}
+
+.sender-receiver {
+    font-style: italic;
+    margin-bottom: 10px;
+}
+
+.tape {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 60px;
+    height: 50px;
+    background-image: url(./images/Wow.png);
+    background-size: cover; /* Or 'contain', depending on the desired effect */
+    border-radius: 15px;
+    z-index: 3;
+}
+
+.star {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background-image: url('https://img.icons8.com/size=100&id=KHF6cI4bbFFj&format=png&color=000000');
+    background-size: contain;
+    z-index: 4;
+}
+
+.star:nth-child(1) {
+    top: -30px;
+    left: -30px;
+}
+
+.star:nth-child(2) {
+    top: -30px;
+    right: -30px;
+}
+
+.star:nth-child(3) {
+    bottom: -30px;
+    left: -30px;
+}
+
+.star:nth-child(4) {
+    bottom: -30px;
+    right: -30px;
+}
+
+.greeting-card {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+    max-width: 600px;
+    background-color: white;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    z-index: 10;
+}
+
+.greeting-card.show {
+    display: flex;
+}
+
+.card-image {
+    flex: 1;
+    background-image: url('./images/pexels-ivan-samkov-8104180.jpg');
+    background-size: cover;
+    background-position: center;
+    min-height: 300px;
+}
+
+.card-text {
+    flex: 1;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.card-text h1 {
+    font-size: 2rem;
+    color: #000;
+    margin-bottom: 1rem;
+}
+
+.card-text p {
+    font-size: 1rem;
+    line-height: 1.5;
+    margin-bottom: 1rem;
+}
+
+.signature {
+    align-self: flex-end;
+    font-style: italic;
+}
