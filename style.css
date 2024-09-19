@@ -71,38 +71,51 @@ body {
     width: 60px;
     height: 50px;
     background-image: url(./images/Wow.png);
-    background-size: cover; /* Or 'contain', depending on the desired effect */
+    background-size: cover;
+    /* Or 'contain', depending on the desired effect */
     border-radius: 15px;
     z-index: 3;
 }
 
 .star {
     position: absolute;
-    width: 20px;
-    height: 20px;
-    background-image: url('https://img.icons8.com/size=100&id=KHF6cI4bbFFj&format=png&color=000000');
+    width: 80px;
+    height: 80px;
     background-size: contain;
-    z-index: 4;
+    background-repeat: no-repeat;
+    background-image: url('./images/Star.svg');
+    /* background-color: gold; */
+    /* clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%); */
 }
 
-.star:nth-child(1) {
-    top: -30px;
+.star-1 {
+    top: -13px;
     left: -30px;
 }
 
-.star:nth-child(2) {
-    top: -30px;
-    right: -30px;
+.star-2 {
+    top: -15px;
+    right: -15px;
 }
 
-.star:nth-child(3) {
-    bottom: -30px;
-    left: -30px;
+.star-3 {
+    bottom: -15px;
+    left: 25%;
 }
 
-.star:nth-child(4) {
-    bottom: -30px;
-    right: -30px;
+.star-4 {
+    top: 50%;
+    right: -15px;
+}
+
+.star-5 {
+    bottom: -15px;
+    right: -15px;
+}
+
+.star-6 {
+    top: 25%;
+    left: -15px;
 }
 
 .greeting-card {
