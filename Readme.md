@@ -11,7 +11,7 @@ birthday-web/
 ├── style.css
 ├── script.js
 └── images/
-    └── (place your images here)
+    └── images.png
 ```
 
 ## Features
