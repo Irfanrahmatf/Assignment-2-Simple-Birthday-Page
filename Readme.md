@@ -41,6 +41,11 @@ birthday-web/
 - Framework CSS (Bootstrap 5)
 - JavaScript
 
+## Live Demo
+
+live demo of this project:  
+[Live Demo](https://irfanrahmatf.github.io/Assignment-2-Simple-Birthday-Page/)
+
 ## Author
 
 [@Irfanrahmatf]
