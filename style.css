@@ -149,6 +149,7 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    text-align: justify;
 }
 
 .card-text h1 {
